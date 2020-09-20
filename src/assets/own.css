@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-family: Microsoft JhengHei;
+}
+html, body { scroll-behavior:smooth; }
+
+.slot-free {
+    color: #c8c8c8;
+    text-decoration: line-through;
+}
+.content{
+    min-height: calc(90vh - 8rem);
+}
+.logo-font{
+    font-family: "Pacifico", cursive;
+}
+footer{
+    color: #ffffff;
+    margin: 0 auto;
+    padding: 3rem 0 1rem 0 ;
+    background-color: #326A69 !important;
+}
+.footer-icon i{
+    font-size: 3rem;
+}
+/* font size */
+.text-primary-self{
+    font-size: 3rem !important;
+    user-select: none;
+}
+.text-minor-self{
+    font-size: 1rem !important;
+    user-select: none;
+}
+.text-separate-self{
+    font-size: 2rem !important;
+    user-select: none;
+}
+
+/* text color */
+.color-text-main{
+    color: #326A69 !important;
+}
+.color-text-primary{
+    color: #395273 !important;
+}
+.color-text-minor{
+    color: #9D8551 !important;
+}
+.color-text-three{
+    color: #48B7B7 !important;
+}
+.color-text-four{
+    color: #C8C8C8 !important;
+}
+
+/* font size */
+.font-size-125{
+    font-size: 1.25rem !important;
+}
+/* writing mode */
+.text-writing-lr{
+    writing-mode: vertical-lr;
+    user-select: none;
+}
+.text-writing-rl{
+    writing-mode: vertical-rl;
+    user-select: none;
+}
+/* bg color */
+.bg-main{
+    background-color: #326a69 !important;
+}
+/* line drow */
+.line-main-top {
+    width: 100%;
+    height: 1px;
+    border-top: 1px #326a69 solid ;
+} 
+
+.line-main-right {
+    margin: 0 1rem 0 1rem;
+    width: 25px;
+    height: 20%;
+    border-right: 1px #326a69 solid ;
+    
+} 
+
+/* img */
+.loadingImg{
+    width: 100%;
+}
+
+ /* display */
+.flex-total-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+/* media */
+@media screen and (min-width:1200px){
+    .loadingImg{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:1200px) and (min-width:992px){
+    .loadingImg{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:992px) and (min-width:768px){
+    *{
+        font-size: 18px !important;
+    }
+}
+@media screen and (max-width:768px) and (min-width:576px){
+    *{
+        font-size: 16px !important;
+    }
+}
+@media screen and (max-width:576px){
+    *{
+        font-size: 12px !important;
+    }
+}
+
