@@ -64,22 +64,18 @@ const routes = [
     children: [
       {
         path: 'products',
-        name: 'Products',
         component: () => import('../views/dashboard/Products.vue'),
       },
       {
         path: 'coupons',
-        name: 'Coupons',
         component: () => import('../views/dashboard/Coupons.vue'),
       },
       {
         path: 'orders',
-        name: 'Orders',
         component: () => import('../views/dashboard/Orders.vue'),
       },
       {
         path: 'imageCatch',
-        name: 'ImageCatch',
         component: () => import('../views/dashboard/ImageCatch.vue'),
       },
     ],

@@ -10,12 +10,18 @@ import {
 import { required, email, min } from 'vee-validate/dist/rules';
 import TW from 'vee-validate/dist/locale/zh_TW.json';
 // system
+import {
+  LMap, LTileLayer, LMarker, LPopup, LIcon,
+} from 'vue2-leaflet';
 import App from './App.vue';
 import router from './router';
 
 // css include
 import '@/assets/own.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import css file
+
+// maps css
+import 'leaflet/dist/leaflet.css';
 
 Vue.config.productionTip = false;
 
@@ -56,6 +62,11 @@ extend('min', min);
 
 Vue.component('ValidationProvider', ValidationProvider);
 Vue.component('ValidationObserver', ValidationObserver);
+Vue.component('l-map', LMap);
+Vue.component('l-tile-layer', LTileLayer);
+Vue.component('l-marker', LMarker);
+Vue.component('l-popup', LPopup);
+Vue.component('l-icon', LIcon);
 
 new Vue({
   router,

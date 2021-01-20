@@ -13,7 +13,7 @@
           class="img-fluid license-img"
         >
         <div class="license-link">
-          <span>商品資訊</span>
+          <span @click="jumpPage(keyName)">商品資訊</span>
         </div>
       </div>
       <h4 class="color-text-three text-center mt-2">{{item.title}}</h4>
@@ -31,6 +31,25 @@ export default {
     full: {
       type: Boolean,
       default: () => false,
+    },
+    keyName: {
+      type: String,
+      default: () => 'all',
+    },
+  },
+  data() {
+    return {
+      jumpName: '',
+    };
+  },
+  methods: {
+    jumpPage(name) {
+      this.$router.push({
+        path: '/products',
+        query: {
+          type: `class-${name}`,
+        },
+      });
     },
   },
 };

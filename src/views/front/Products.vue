@@ -129,6 +129,7 @@ export default {
           // 開始計算頁碼部分
           this.calcProducts();
           load.hide();
+          this.showItem = this.$route.query.type;
         }).catch((err) => {
           console.log(err);
         });
@@ -185,9 +186,11 @@ export default {
   },
   watch: {
     showItem() {
+      console.log('in', this.showItem);
       // 產生過濾後的products 方便 重新計算頁碼
       const filterProducts = this.showItem === 'all' ? this.orProducts : this.orProducts.filter((item) => item.category === this.showItem);
       // 該頁需要顯示paginate 則加入群組
+      console.log(this.orProducts, filterProducts);
       this.productsPaginate = {
         current_page: 1,
         // 總比數

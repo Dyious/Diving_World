@@ -18,10 +18,10 @@
     <section class="flex-total-center m-5 flex-column">
       <h1 class="color-text-primary m-0">自由潛水</h1>
       <h6 class="color-text-minor">F R E E D I V I N G</h6>
-      <licenses-loop :licenses-data="divingLicenses.free"></licenses-loop>
+      <licenses-loop :licenses-data="divingLicenses.free" keyName='free'></licenses-loop>
       <h1 class="color-text-primary mt-5 m-0">水肺潛水</h1>
       <h6 class="color-text-minor">S C U B A D I V I N G</h6>
-      <licenses-loop :licenses-data="divingLicenses.scuba"></licenses-loop>
+      <licenses-loop :licenses-data="divingLicenses.scuba" keyName='sucba'></licenses-loop>
     </section>
 
     <split-line font-title="教練群"></split-line>
@@ -79,7 +79,12 @@ export default {
   },
   methods: {
     linkPruduct() {
-      this.$router.push('/products').catch((err) => err);
+      this.$router.push({
+        path: '/products',
+        query: {
+          type: 'all',
+        },
+      }).catch((err) => err);
     },
   },
   created() {

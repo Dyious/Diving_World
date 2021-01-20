@@ -42,7 +42,12 @@ export default {
       document.querySelector('html,body').scrollTop = 0;
       switch (this.icon) {
         case 'box': {
-          this.$router.push('/products');
+          this.$router.push({
+            path: '/products',
+            query: {
+              type: 'all',
+            },
+          });
           break;
         }
         case 'map': {

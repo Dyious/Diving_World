@@ -85,7 +85,12 @@ export default {
           break;
         }
         case 'products': {
-          this.$router.push('/products').catch((err) => err);
+          this.$router.push('/products', {
+            query: {
+              type: 'all',
+            },
+          })
+            .catch((err) => err);
           break;
         }
         case 'knowMore': {
@@ -141,7 +146,7 @@ header
       border-bottom: 1px #326a69 solid !important
 
 .navbar-title
-  text-align:center
+  text-align: center
   line-height: 100px
   transition: all 0.5s
   cursor: pointer
